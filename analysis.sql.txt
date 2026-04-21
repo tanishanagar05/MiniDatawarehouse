@@ -1,0 +1,12 @@
+-- Total Sales
+SELECT SUM(amount) FROM fact_sales;
+
+-- Product-wise Sales
+SELECT product_id, SUM(amount)
+FROM fact_sales
+GROUP BY product_id;
+
+-- Customer-wise Sales
+SELECT customer_id, SUM(amount)
+FROM fact_sales
+GROUP BY customer_id;
